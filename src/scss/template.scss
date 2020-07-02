@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
+
+$phone-sm: 576px;
+$tablet-md: 768px;
+$desktop-lg: 992px;
+$full-screen-ex-lg: 1200px;
+
+$branco: #fff;
+$preto: #000;
+$cinza: #80918D;
+$verde: #225627;
+$amarelo: #E7AD08;
+
+$size-text: 14px;
+$size-title: 32px;
+$size-subTitle: 24px;
+
+$font: 'Chivo', sans-serif;
+
+// Midias Queries
+@mixin landscape {
+    @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width:#{$phone-sm}) {
+        @content;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin tablet {
+    @media (min-width: #{$tablet-md}) {
+        @content;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin desktop {
+    @media (min-width: #{$desktop-lg}) {
+        @content;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin desktop-full {
+    @media (min-width: #{$full-screen-ex-lg}) {
+        @content;
+    }
+}
+
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+}

@@ -1,0 +1,163 @@
+@import "template.scss";
+@import "componentes.scss";
+
+.horttas {
+    .horttas__info {
+        position: absolute;
+        top: 0;
+        z-index: 2;
+        width: 100%;
+        height: 100vh;
+
+        .horttas__info--progress {
+            margin-top: 10vh;
+            margin-left: 3%;
+
+            @media (min-width: 1400px) {
+                margin-top: 20vh;
+            }
+
+            li {
+                list-style: none;
+                line-height: 0px;
+
+                @include flex-box;
+                align-items: center;
+
+                .node {
+                    background-color: $branco;
+                    height: 15px;
+                    width: 15px;
+                    border: 4px solid rgba(231, 173, 8, 0.8);
+                    border-radius: 50%;
+                    display: inline-block;
+                    transition: all 1000ms ease;
+                }
+
+                .divider {
+                    height: 120px;
+                    width: 2px;
+                    margin-left: 7px;
+                    transition: all 800ms ease;
+                }
+
+                .while {
+                    background-color: $branco;
+                }
+
+                .mt {
+                    margin-top: -15px;
+                }
+
+                p {
+                    margin-bottom: -10px;
+                    color: $branco;
+                    font-size: 12px;
+                    line-height: 15px;
+                    max-width: 80px;
+
+                    display: inline-block;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .horttas__info--form {
+                a {
+                    color: $branco;
+                    text-decoration: none;
+                    p {
+                        padding: 5px 0 0 7px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+
+        .horttas__info--logo {
+            @include flex-box;
+            padding: 7% 0 0 22%;
+
+            span {
+                color: $branco;
+                padding-left: 12px;
+                align-self: flex-end;
+                max-width: 20px;
+                line-height: 12px;
+                letter-spacing: 2px;
+                font-weight: 300;
+                font-size: 11px;
+            }
+        }
+
+        .horttas__info--scroll{
+            @include flex-box;
+            flex-direction: column;
+            align-items: center;
+            float: right;
+
+            padding-top: 3%;
+           
+
+            @media(min-width: 1400px){
+                padding-top: 15%;
+            }
+
+            p{
+                padding-top: 10px;
+                color: $branco;
+            }
+        }
+
+        .horttas__info--card {
+            @include flex-box;
+            flex-direction: column;
+            justify-content: space-between;
+
+            background-color: $verde;
+            height: 95vh;
+            padding: 15px 35px;
+
+            /* CARD */
+            .card__social {
+                img {
+                    margin-right: 15px;
+                }
+            }
+
+            .card__info {
+                .card__info--title {
+                    h2 {
+                        color: $branco;
+                        font-weight: 600;
+                    }
+                }
+
+                .card__info--sub-title {
+                    h5 {
+                        padding-top: 1%;
+                        color: $amarelo;
+                    }
+                }
+
+                .card_info--footer {
+                    padding: 15% 0 5% 0;
+                    button {
+                        background-color: transparent;
+                        border: 2px solid $branco;
+                        color: white;
+                        font-weight: normal;
+                        padding: 2% 15%;
+                        cursor: pointer;
+                        transition: background-color ease-in-out 0.4s, color ease-in-out 0.4s;
+
+                        &:hover {
+                            background-color: $branco;
+                            color: $preto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

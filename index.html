@@ -27,12 +27,122 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+
 </head>
 
 <body>
+    <div id="fullpage">
+        <div class="section horttas position-relative">
+            <div class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active" style="background-image: url('src/img/capa-1.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
 
+                    <div class="carousel-item" style="background-image: url('src/img/capa-2.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
 
+                    <div class="carousel-item" style="background-image: url('src/img/capa-3.jpg')">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="horttas__info">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="horttas__info--logo">
+                                <img src="src/img/logo-horttas.svg" alt="Horttas">
+                                <span>Alimentos Orgânicos</span>
+                            </div>
+                            <div class="horttas__info--progress">
+                                <ul>
+                                    <li>
+                                        <div class="node"></div>
+                                        <a href="#o-que-e-horttas">
+                                            <p>O que é a Horttas</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="divider while"></div>
+                                    </li>
+                                    <li>
+                                        <div class="node while"></div>
+                                        <a href="#alimentos-organicos">
+                                            <p>Alimentos Orgânicos</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="divider while"></div>
+                                    </li>
+                                    <li>
+                                        <div class="node while"></div>
+                                        <a href="#faca-parte">
+                                            <p class="mt">Faça parte</p>
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <p class=" horttas__info--form">
+                                    <a href="#formulario">
+                                        FORMULÁRIO
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div class="horttas__info--scroll">
+                                <img src="src/img/icons/scroll.svg" alt="scroll">
+                                <p>Scroll para baixo para ver mais</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="horttas__info--card">
+                                <div class="card__social">
+                                    <a href="">
+                                        <img src="src/img/icons/instagarm.svg" alt="Instagram" title="Instagram">
+                                    </a>
+                                    <a href="">
+                                        <img src="src/img/icons/facebook.svg" alt="Facebook" title="Facebook">
+                                    </a>
+                                    <a href="">
+                                        <img src="src/img/icons/whatsapp.svg" alt="Facebook" title="Facebook">
+                                    </a>
+                                </div>
+                                <div class="card__info">
+                                    <div class="card__info--title">
+                                        <h2>Produção de alimentos orgânicos e saudáveis que segue o modelo de CSA</h2>
+                                    </div>
+
+                                    <div class="card__info--sub-title">
+                                        <h5>Comunidade que Sustenta a Agricultura</h5>
+                                    </div>
+
+                                    <div class="card_info--footer">
+                                        <button>Receba as novidades</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" style="background-color: #225627;">Some section</div>
+        <div class="section" style="background-color: blue;">Some section</div>
+        <div class="section" style="background-color: yellow;">Some section</div>
+        <div class="section" style="background-color: pink;">Some section</div>
+    </div>
+
+    <script src="src/libs/js/easings.min.js"></script>
+    <script type="text/javascript" src="src/libs/js/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="src/libs/js/fullpage.js"></script>
 
 
 
@@ -47,6 +157,7 @@
         crossorigin="anonymous"></script>
 
     <script src="src/js/index.js"></script>
+
 </body>
 
 </html>
