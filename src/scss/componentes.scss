@@ -22,3 +22,67 @@
     margin-bottom: 15px !important;
     margin: 0 !important;
 }
+
+.progress {
+    margin-top: 20vh;
+    margin-left: 3%;
+
+    @media (min-width: 1400px) {
+        margin-top: 30vh;
+    }
+
+    li {
+        list-style: none;
+        line-height: 0px;
+
+        @include flex-box;
+        align-items: center;
+
+        .node {
+            background-color: $branco;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            display: inline-block;
+            transition: all 1000ms ease;
+        }
+
+        .divider {
+            height: 120px;
+            width: 2px;
+            margin-left: 7px;
+            transition: all 800ms ease;
+        }
+
+        .while {
+            background-color: $branco;
+        }
+
+        .mt {
+            margin-top: -15px;
+        }
+
+        p {
+            margin-bottom: -10px;
+            color: $branco;
+            font-size: 12px;
+            line-height: 15px;
+            max-width: 80px;
+
+            display: inline-block;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    }
+
+    .horttas__info--form {
+        a {
+            color: $branco;
+            text-decoration: none;
+            p {
+                padding: 5px 0 0 7px;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
