@@ -90,20 +90,19 @@
             }
         }
 
-        .horttas__info--scroll{
+        .horttas__info--scroll {
             @include flex-box;
             flex-direction: column;
             align-items: center;
             float: right;
 
-            padding-top: 3%;
-           
+            padding-top: 2%;
 
-            @media(min-width: 1400px){
+            @media (min-width: 1400px) {
                 padding-top: 15%;
             }
 
-            p{
+            p {
                 padding-top: 10px;
                 color: $branco;
             }
@@ -117,6 +116,7 @@
             background-color: $verde;
             height: 95vh;
             padding: 15px 35px;
+            margin: 3% 0;
 
             /* CARD */
             .card__social {
@@ -158,6 +158,134 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.about-horttas {
+    background-color: $verde;
+    padding: 3% 0;
+
+    .about-horttas__info-about {
+        .info-about__title {
+            color: $branco;
+            font-weight: bold;
+            padding-bottom: 4.5%;
+
+            @media (min-width: 1400px) {
+                padding-bottom: 7%;
+            }
+        }
+
+        h3 {
+            color: $amarelo;
+        }
+
+        p {
+            color: $branco;
+            padding-left: 3%;
+            line-height: 26px;
+            max-width: 580px;
+            font-weight: 300;
+        }
+    }
+}
+
+.foods {
+    background-color: $amarelo;
+    padding: 3% 0;
+
+    .foods__info-about {
+        .info-about__title {
+            color: $branco;
+            font-weight: bold;
+            padding-bottom: 4.5%;
+
+            @media (min-width: 1400px) {
+                padding-bottom: 7%;
+            }
+        }
+
+        h3 {
+            color: #00a099;
+        }
+
+        p {
+            color: $verde;
+            padding-left: 3%;
+            line-height: 26px;
+            max-width: 580px;
+            font-weight: 300;
+        }
+    }
+}
+
+.join {
+    background-color: $cinza;
+    padding: 3% 0;
+
+    .join__info-about {
+        .info-about__title {
+            color: $branco;
+            font-weight: bold;
+            padding-bottom: 4.5%;
+
+            @media (min-width: 1400px) {
+                padding-bottom: 7%;
+            }
+        }
+
+        h3 {
+            color: $amarelo;
+        }
+
+        p {
+            color: $branco;
+            padding-left: 3%;
+            line-height: 26px;
+            max-width: 580px;
+            font-weight: 300;
+        }
+
+        ul {
+            list-style-type: none;
+            li {
+                color: $branco;
+                margin-left: 3%;
+                line-height: 26px;
+                max-width: 580px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.main {
+    background-color: $verde;
+
+    .main__card {
+        background-color: $branco;
+        margin: 3% 0;
+
+        @include flex-box;
+        flex-direction: column;
+        justify-content: space-between;
+
+        min-height: 95vh;
+        padding: 100px 35px 5px 35px;
+
+        .card__info {
+            h2 {
+                max-width: 500px;
+                font-weight: bold;
+                color: $verde;
+            }
+            p {
+                max-width: 500px;
+                color: $verde;
+            }
+        }
+        .card__footer {
         }
     }
 }
