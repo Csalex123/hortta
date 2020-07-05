@@ -26,15 +26,17 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/libs/css/fullpage.css">
 
 </head>
 
 <body>
     <div id="fullpage">
-        <div class="section horttas position-relative">
+        <div class="section horttas position-relative" >
             <div class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active" style="background-image: url('src/img/capa-1.jpg')">
@@ -57,11 +59,11 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-7">
-                            <div class="horttas__info--logo">
+                            <div class="horttas__info--logo d-none d-lg-block">
                                 <img src="src/img/logo-horttas.svg" alt="Horttas">
                                 <span>Alimentos Orgânicos</span>
                             </div>
-                            <div class="horttas__info--progress">
+                            <div class="horttas__info--progress d-none d-lg-block">
                                 <ul>
                                     <li>
                                         <div class="node border-yellow"></div>
@@ -96,14 +98,14 @@
                                 </p>
                             </div>
 
-                            <div class="horttas__info--scroll">
+                            <div class="horttas__info--scroll d-none d-lg-block">
                                 <img src="src/img/icons/scroll.svg" alt="scroll">
                                 <p>Scroll para baixo para ver mais</p>
                             </div>
                         </div>
                         <div class="col-md-5">
-                            <div class="horttas__info--card">
-                                <div class="card__social">
+                            <div class="horttas__info--card ">
+                                <div class="card__social d-none d-lg-block">
                                     <a href="">
                                         <img src="src/img/icons/instagarm.svg" alt="Instagram" title="Instagram">
                                     </a>
@@ -124,7 +126,13 @@
                                     </div>
 
                                     <div class="card_info--footer">
-                                        <button>Receba as novidades</button>
+                                        <button>Receba as novidades </button>
+                                    </div>
+
+                                    <div class="card_info--arrow d-sm-flex">
+                                        <a href="#o-que-e-horttas">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -134,11 +142,11 @@
             </div>
         </div>
 
-        <div class="section about-horttas">
+        <div class="section fp-auto-height about-horttas" id="section1">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-7">
-                        <div class="about-horttas__banner">
+                        <div class="about-horttas__banner d-sm-none d-none d-lg-block">
                             <div class="banner__progress">
                                 <ul>
                                     <li>
@@ -208,12 +216,12 @@
             </div>
         </div>
 
-        <div class="section foods">
+        <div class="section fp-auto-height foods" id="section2">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="foods__banner">
-                            <div class="banner__progress">
+                            <div class="banner__progress d-none d-lg-block">
                                 <ul>
                                     <li>
                                         <div class="node border-yellow"></div>
@@ -276,12 +284,12 @@
             </div>
         </div>
 
-        <div class="section join">
+        <div class="section fp-auto-height join">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="join__banner">
-                            <div class="banner__progress">
+                            <div class="banner__progress d-none d-lg-block">
                                 <ul>
                                     <li>
                                         <div class="node border-gray"></div>
@@ -348,12 +356,12 @@
             </div>
         </div>
 
-        <main class="section main">
+        <main class="section fp-auto-height main">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-7">
                         <div class="main__form">
-                            <div class="banner__progress">
+                            <div class="banner__progress d-none d-lg-block">
                                 <ul>
                                     <li>
                                         <div class="node border-green"></div>
