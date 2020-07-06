@@ -3,7 +3,7 @@
 $phone-sm: 576px;
 $tablet-md: 768px;
 $desktop-lg: 992px;
-$full-screen-ex-lg: 1200px;
+$full-screen-ex-lg: 1400px;
 
 $branco: #fff;
 $preto: #000;
@@ -72,6 +72,11 @@ $font: 'Chivo', sans-serif;
     font-family: $font;
 }
 
+*:focus{
+    outline: none;
+}
+
 body{
     background-color: $verde;
 }
+

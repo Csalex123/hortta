@@ -2,6 +2,7 @@
 @import "componentes.scss";
 
 .horttas {
+    min-height: 100vh;
     .horttas__info {
         background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
@@ -44,7 +45,7 @@
             padding-top: 2%;
 
             @media (min-width: 1400px) {
-                padding-top: 15%;
+                padding-top: 25%;
             }
 
             p {
@@ -59,14 +60,23 @@
             justify-content: space-between;
 
             background-color: $verde;
-            height: 95vh;
-            padding: 15px 35px;
-            margin: 3% 0;
 
             @include mobile {
                 margin-top: calc(95vh - 53vh);
                 height: 53vh;
                 padding: 20px 20px 5px 20px;
+            }
+
+            @include tablet {
+                margin-top: calc(97vh - 35vh);
+                height: 35vh;
+                padding: 30px 20px 50px 20px;
+            }
+
+            @include desktop {
+                margin: 3% 0;
+                height: 95vh;
+                padding: 15px 35px;
             }
 
             /* CARD */
@@ -97,6 +107,11 @@
                     @include mobile {
                         padding-top: 5%;
                     }
+
+                    @include tablet {
+                        padding-top: 8%;
+                    }
+
                     button {
                         background-color: transparent;
                         border: 2px solid $branco;
@@ -113,6 +128,7 @@
                             padding: 4% 15%;
                             font-size: 18px;
                         }
+
                         &:hover {
                             background-color: $branco;
                             color: $verde;
@@ -122,17 +138,27 @@
 
                 .card_info--arrow {
                     padding-top: 5%;
-                    
+                    display: none;
 
-                    @include flex-box;
-                    justify-content: center;
-                    align-items: center;
+                    @include mobile {
+                        @include flex-box;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    @include tablet {
+                        padding-top: 0;
+                        padding-bottom: 3%;
+                        @include flex-box;
+                        justify-content: center;
+                        align-items: center;
+                    }
 
                     @include desktop {
                         display: none;
                     }
 
-                    a{
+                    a {
                         color: white;
                     }
                 }
@@ -142,11 +168,71 @@
 }
 
 .about-horttas {
+    min-height: 100vh;
     background-color: $verde;
     padding: 3% 0;
 
+    @include mobile {
+        padding-top: 20%;
+    }
+
     .about-horttas__banner {
+        position: relative;
         @include flex-box;
+
+        .banner__image {
+            margin: 0px 55px;
+            padding: 0 0 3% 0;
+            transition: padding 0.8s ease-in-out, margin 0.8s ease-in-out;
+
+            @include mobile {
+                margin: 0;
+                padding-bottom: 25%;
+            }
+
+            @include desktop-full {
+                padding-bottom: 10%;
+                margin: 0 0 0 110px;
+            }
+
+            .image__title {
+                color: $branco;
+                font-weight: bold;
+                padding-bottom: 4.5%;
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+            }
+
+            .image__float {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+
+                @include desktop-full {
+                    right: 8%;
+                }
+
+                img {
+                    height: 250px;
+                    width: 300px;
+                    transition: all 0.8s ease-in-out;
+
+                    @include mobile {
+                        height: 205px;
+                        width: 254px;
+                    }
+
+                    @include desktop-full {
+                        height: 355px;
+                        width: 394px;
+                    }
+                }
+            }
+        }
 
         .banner__progress {
             @extend .progress;
@@ -163,9 +249,14 @@
 
     .about-horttas__info-about {
         .info-about__title {
+            display: block;
             color: $branco;
             font-weight: bold;
             padding-bottom: 4.5%;
+
+            @include mobile {
+                display: none;
+            }
 
             @media (min-width: 1400px) {
                 padding-bottom: 7%;
@@ -187,24 +278,41 @@
 }
 
 .foods {
+    min-height: 100vh;
     background-color: $amarelo;
     padding: 3% 0;
     position: relative;
 
+    @include mobile {
+        padding-top: 20%;
+    }
+
     .foods__banner {
         @include flex-box;
+        align-items: center;
 
-        // .banner_image {
-        //     margin: 0px 55px;
+        .banner_image {
+            margin: 0px 55px;
 
-        //     img {
-        //         height: 88vh;
-        //         width: 100%;
-        //     }
-        // }
+            @include mobile {
+                margin: 0px;
+            }
+
+            .image__title {
+                color: $branco;
+                font-weight: bold;
+                padding-bottom: 4.5%;
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+            }
+        }
 
         .banner__progress {
             @extend .progress;
+            margin-top: 0;
 
             .border-yellow {
                 border: 4px solid $amarelo;
@@ -218,9 +326,14 @@
 
     .foods__info-about {
         .info-about__title {
+            display: block;
             color: $branco;
             font-weight: bold;
             padding-bottom: 4.5%;
+
+            @include mobile {
+                display: none;
+            }
 
             @media (min-width: 1400px) {
                 padding-bottom: 7%;
@@ -237,6 +350,10 @@
             line-height: 26px;
             max-width: 580px;
             font-weight: 300;
+
+            @include mobile {
+                color: $preto;
+            }
         }
     }
 }
@@ -244,24 +361,100 @@
 .join {
     background-color: $cinza;
     padding: 3% 0;
+    position: relative;
+    min-height: 100vh;
 
-    .banner__progress {
-        @extend .progress;
+    @include mobile {
+        padding-top: 20%;
+    }
 
-        .border-yellow {
-            border: 4px solid $amarelo;
+    .join__banner {
+        @include flex-box;
+        align-items: center;
+
+        .banner__image {
+            margin: 0px 55px;
+            padding: 0 0 6% 0;
+            transition: padding 0.8s ease-in-out, margin 0.8s ease-in-out;
+
+            @include mobile {
+                margin: 0px;
+                padding-bottom: 15%;
+            }
+
+            @include desktop-full {
+                padding-bottom: 20%;
+                margin: 0 0 0 110px;
+            }
+
+            .image__title {
+                color: $branco;
+                font-weight: bold;
+                padding-bottom: 4.5%;
+                display: none;
+
+                @include mobile {
+                    display: block;
+                }
+            }
+
+            .image__float {
+                position: absolute;
+                right: 15%;
+                bottom: -13%;
+                z-index: 2;
+
+                @include mobile{
+                    right: 7%; 
+                }
+
+                @include desktop-full {
+                    right: 10%;
+                    bottom: -2%;
+                }
+
+                img {
+                    height: 280px;
+                    width: 270px;
+                    transition: all 0.8s ease-in-out;
+
+                    @include mobile {
+                        height: 180px;
+                        width: 230px;
+                    }
+
+                    @include desktop-full {
+                        height: 355px;
+                        width: 355px;
+                    }
+                }
+            }
         }
 
-        .border-gray {
-            border: 4px solid $cinza;
+        .banner__progress {
+            @extend .progress;
+            margin-top: 0;
+
+            .border-yellow {
+                border: 4px solid $amarelo;
+            }
+
+            .border-gray {
+                border: 4px solid $cinza;
+            }
         }
     }
 
     .join__info-about {
         .info-about__title {
+            display: block;
             color: $branco;
             font-weight: bold;
             padding-bottom: 4.5%;
+
+            @include mobile {
+                display: none;
+            }
 
             @media (min-width: 1400px) {
                 padding-bottom: 7%;
@@ -294,11 +487,27 @@
 }
 
 .main {
+    margin-top: 0;
     background-color: $verde;
 
+    @include mobile {
+        padding-top: 20%;
+    }
+
+    .row {
+        align-items: center;
+
+        @include desktop-full {
+            align-items: flex-end;
+        }
+    }
+
     .main__form {
-        .banner__progress {
+        @include flex-box;
+
+        .form__progress {
             @extend .progress;
+            margin-top: 15vh;
 
             .border-green {
                 border: 4px solid $verde;
@@ -307,6 +516,99 @@
             .horttas__info--form {
                 a {
                     color: $amarelo;
+                }
+            }
+        }
+
+        .form__info {
+            margin: 0px 55px;
+
+            @include mobile {
+                margin: 0px;
+            }
+
+            @include desktop-full {
+                padding-bottom: 20%;
+                margin: 0 0 0 110px;
+            }   
+
+            img{
+                display: block;
+
+                @include mobile{
+                    display: none;
+                }
+            }
+
+            h2{
+                color: $branco;
+                display: none;
+                padding-bottom: 15%;
+
+                @include mobile{
+                    display: block;
+                }
+            }
+
+            h3 {
+                padding: 2.5% 0;
+                color: $amarelo;
+
+                @include mobile{
+                    font-size: 18px;
+                }
+            }
+
+            .info_form-content {
+                label,
+                input {
+                    color: $branco;
+                    display: block;
+                    font-weight: lighter;
+                }
+
+                ::placeholder {
+                    color: #80918d;
+                    padding: 0 1%;
+                }
+
+                .form-group:hover {
+                    label {
+                        color: $amarelo;
+                        transition: all 0.4s ease-in-out;
+                    }
+                }
+
+                input {
+                    cursor: pointer;
+                    background-color: transparent;
+                    border: 2px solid $branco;
+                    width: 100%;
+                    padding: 2%;
+                    transition: border 0.4s ease-in-out;
+
+                    &:focus {
+                        border: 2px solid $amarelo;
+                    }
+                }
+
+                button {
+                    margin-top: 3%;
+                    cursor: pointer;
+                    border: 2px solid $branco;
+                    background-color: $branco;
+                    color: $verde;
+                    padding: 2% 7%;
+                    transition: border 0.4s ease-in-out;
+                    width: auto;
+
+                    &:hover {
+                        border: 2px solid $amarelo;
+                    }
+
+                    @include mobile{
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -322,6 +624,18 @@
 
         min-height: 95vh;
         padding: 100px 15px 15px 15px;
+
+        @include mobile{
+            display: none;
+        }
+
+        @include tablet {
+            min-height: 70vh;
+        }
+
+        @include desktop {
+            min-height: 95vh;
+        }
 
         .card__info {
             padding: 0 25px;
