@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
 
+$small-mobile: 375px;
 $phone-sm: 576px;
 $tablet-md: 768px;
 $desktop-lg: 992px;
@@ -20,6 +21,12 @@ $font: 'Chivo', sans-serif;
 // Midias Queries
 @mixin landscape {
     @media screen and (orientation: landscape) {
+        @content;
+    }
+}
+
+@mixin small-mobile{
+    @media (max-width:#{$small-mobile}) {
         @content;
     }
 }
@@ -76,7 +83,8 @@ $font: 'Chivo', sans-serif;
     outline: none;
 }
 
-body{
+html, body{
     background-color: $verde;
+    scroll-behavior: smooth; 
 }
 

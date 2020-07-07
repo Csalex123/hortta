@@ -24,8 +24,7 @@
     <meta property="og:image:width" content="1080" />
     <meta property="og:image:height" content="606" />
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
         integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
@@ -35,6 +34,58 @@
 </head>
 
 <body>
+
+    <header class="header container-fluid">
+        <div class="header__card-top">
+            <div class="card-top__content">Lorem</div>
+        </div>
+        <div class="header__logo-icon">
+            <div>
+                <img src="src/img/horttas-mobile.svg" alt="Hortta">
+            </div>
+            <div>
+                <img id="bar" src="src/img/bar.svg" alt="Icon Bar">
+            </div>
+        </div>
+    </header>
+
+    <nav class="menu container-fluid">
+        <div class="menu__card-top">
+            <div class="card-top__content">Lorem</div>
+        </div>
+        <header class="menu__header">
+            <div>
+                <img src="src/img/horttas-mobile.svg" alt="Hortta">
+            </div>
+
+            <div>
+                <img id="close" src="src/img/close.svg" alt="Icon close">
+            </div>
+        </header>
+
+        <div class="menu__content">
+            <div class="content__list">
+                <ul>
+                    <li><a href="#mb-o-que-e-horttas">O que é a Horttas</a></li>
+                    <li><a href="#mb-alimentos-organicos">Alimentos Orgánicos</a></li>
+                    <li><a href="#mb-faca-parte">Faça parte</a></li>
+                    <li><a href="#mb-formulario">FORMULÁRIO</a></li>
+                </ul>
+            </div>
+            <div class="content__social">
+                <a href="">
+                    <img src="src/img/icons/instagarm.svg" alt="Instagram" title="Instagram">
+                </a>
+                <a href="">
+                    <img src="src/img/icons/facebook.svg" alt="Facebook" title="Facebook">
+                </a>
+                <a href="">
+                    <img src="src/img/icons/whatsapp.svg" alt="Facebook" title="Facebook">
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <div id="fullpage">
         <div class="section horttas position-relative">
             <div class="carousel slide" data-ride="carousel">
@@ -142,7 +193,7 @@
             </div>
         </div>
 
-        <div class="section fp-auto-height about-horttas" id="section1">
+        <div class="section fp-auto-height about-horttas" id="mb-o-que-e-horttas">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 col-lg-7 mt-md-5 mb-md-5 mb-lg-5 mt-lg-0">
@@ -175,18 +226,20 @@
                                     </li>
                                 </ul>
 
-                                <p class=" horttas__info--form">
+                                <p class="horttas__info--form">
                                     <a href="#formulario">
                                         FORMULÁRIO
                                     </a>
                                 </p>
                             </div>
 
-                            
+
                             <div class="banner__image">
                                 <h2 class="image__title">O que é a Horttas</h2>
 
-                                <img class="img-fluid" src="src/img/about-1.jpg" alt="Imagem - Sobre" srcset="">
+                                <div>
+                                    <img class="img-fluid" src="src/img/about-1.jpg" alt="Imagem - Sobre" srcset="">
+                                </div>
                                 <div class="image__float">
                                     <img src="src/img/about-2.jpg" alt="" srcset="">
                                 </div>
@@ -227,7 +280,7 @@
             </div>
         </div>
 
-        <div class="section fp-auto-height foods" id="section2">
+        <div class="section fp-auto-height foods" id="mb-alimentos-organicos">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 col-lg-7 mt-md-5 mb-md-5 mb-lg-5 mt-lg-0">
@@ -296,7 +349,7 @@
             </div>
         </div>
 
-        <div class="section fp-auto-height join">
+        <div class="section fp-auto-height join" id="mb-faca-parte">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 col-lg-7 mt-md-5 mb-md-5 mb-lg-5 mt-lg-0">
@@ -376,7 +429,7 @@
             </div>
         </div>
 
-        <main class="section fp-auto-height main">
+        <main class="section fp-auto-height main" id="mb-formulario">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 col-lg-7 mt-md-5 mb-md-5 mb-lg-5 mt-lg-0">
@@ -416,23 +469,21 @@
                                 </p>
                             </div>
 
-                            <div class="form__info mb-5 mb-sm-5">
+                            <div class="form__info mt-5 mt-sm-0">
                                 <h2>Vamos juntos por uma alimentação mais saudável</h2>
                                 <img src="src/img/logo-horttas-2.svg" alt="Logo Horttas">
                                 <h3>Preencha o formulário e faça download do termo de adesão</h3>
 
-                                <div class="info_form-content">
-                                    <form action="">
+                                <div class="info_form-content position-relative">
+                                    <form id="form-contact">
                                         <div class="form-group">
                                             <label for="name" id="label">Nome</label>
-                                            <input type="text" id="name"
-                                                placeholder="Insira o seu nome" required>
+                                            <input type="text" id="name" placeholder="Insira o seu nome" required>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="email">E-mail</label>
-                                            <input type="email" id="email"
-                                                placeholder="Insira o seu e-mail" required>
+                                            <input type="email" id="email" placeholder="Insira o seu e-mail" required>
                                         </div>
 
                                         <div class="form-group">
@@ -441,12 +492,43 @@
                                                 placeholder="Insira o número do seu WhatApp" required>
                                         </div>
 
-                                        <button type="submit">Enviar o formulário</button>
+                                        <button type="submit">Enviar o formulário </button>
                                     </form>
+
+                                    <div class="info_form-content__load">
+                                        <div class="load__spinner">
+                                            <div class="spinner-border text-warning"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-md-12 footer-mobile">
+                        <div class="footer-mobile__info">
+                            <div>
+                                <img src="src/img/logo-coudelaria-mobile.svg" alt="">
+                            </div>
+                            <div>
+                                <span><strong>Horttas</strong></span>
+                            </div>
+                            <div>
+                                <span>Rua Dias D'Ávila, SN - Várzea | Recife-PE (81) 2128.2525</span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="footer-mobile__copyright">
+                            <div class="copyright__info">
+                                <span>© 2020. Coudelaria Souza Leão. Todos os direitos reservados.</span>
+                            </div>
+                            <div class="copyright__bresults">
+                                <span>Desenvolvido por</span>
+                                <img src="src/img/bresults-mobile.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-md-12 col-lg-5">
                         <div class="main__card">
                             <div class="card__info">
@@ -489,22 +571,16 @@
     <script type="text/javascript" src="src/libs/js/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="src/libs/js/fullpage.js"></script>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 
     <script src="src/js/index.js"></script>
 
-    
+
+
+
 
 </body>
 

@@ -1,6 +1,131 @@
 @import "template.scss";
 @import "componentes.scss";
 
+.header {
+    position: fixed;
+    z-index: 199;
+    width: 100vw;
+    height: 30vh;
+    background-color: transparent;
+
+    @include mobile {
+        display: block;
+    }
+
+    @include tablet {
+        display: block;
+    }
+
+    @include desktop {
+        display: none;
+    }
+
+    .header__card-top {
+        outline: none;
+        @include flex-box;
+        justify-content: center;
+
+        .card-top__content {
+            outline: line;
+            margin-top: -20px;
+            border: none;
+            background-color: $branco;
+            @include border-radius(20px);
+            height: 50px;
+            width: 70%;
+            color: $branco;
+        }
+    }
+
+    .header__logo-icon {
+        padding-top: 8%;
+        @include flex-box;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.menu {
+    position: fixed;
+    z-index: 200;
+    width: 100vw;
+    height: 0vh;
+    background-color: $verde;
+    overflow: hidden;
+
+    transition: height 0.6s ease-in-out;
+
+    .menu__card-top {
+        outline: none;
+        @include flex-box;
+        justify-content: center;
+
+        .card-top__content {
+            outline: line;
+            margin-top: -20px;
+            border: none;
+            background-color: $branco;
+            @include border-radius(20px);
+            height: 50px;
+            width: 70%;
+            color: $branco;
+        }
+    }
+
+    .menu__header {
+        padding-top: 8%;
+
+        @include flex-box;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .menu__content {
+        @include flex-box;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 78%;
+
+        ul {
+            margin: 10% 0 0 0;
+            list-style-type: none;
+            color: $amarelo;
+
+            li {
+                line-height: 45px;
+                color: $branco;
+                font-weight: lighter;
+
+                @include flex-box;
+                align-items: center;
+
+                &:before {
+                    content: "•";
+                    padding-right: 8px;
+                    color: $amarelo;
+                    font-size: 26px;
+                }
+
+                a {
+                    color: $branco;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $amarelo;
+                    }
+                }
+            }
+        }
+
+        .content__social {
+            @include flex-box;
+            a {
+                margin-right: 25px;
+            }
+        }
+    }
+}
+
 .horttas {
     min-height: 100vh;
     .horttas__info {
@@ -65,18 +190,27 @@
                 margin-top: calc(95vh - 53vh);
                 height: 53vh;
                 padding: 20px 20px 5px 20px;
+                transition: all 0.5 ease-in-out;
+            }
+
+            @media (min-width: 414px) {
+                margin-top: calc(95vh - 45vh);
+                height: 45vh;
+                transition: all 0.5 ease-in-out;
             }
 
             @include tablet {
                 margin-top: calc(97vh - 35vh);
                 height: 35vh;
                 padding: 30px 20px 50px 20px;
+                transition: all 0.5 ease-in-out;
             }
 
             @include desktop {
                 margin: 3% 0;
                 height: 95vh;
                 padding: 15px 35px;
+                transition: all 0.5 ease-in-out;
             }
 
             /* CARD */
@@ -91,6 +225,10 @@
                     h2 {
                         color: $branco;
                         font-weight: 600;
+
+                        @include mobile {
+                            font-size: 26px;
+                        }
                     }
                 }
 
@@ -170,10 +308,17 @@
 .about-horttas {
     min-height: 100vh;
     background-color: $verde;
-    padding: 3% 0;
 
     @include mobile {
-        padding-top: 20%;
+        padding-top: 37%;
+    }
+
+    @include tablet {
+        padding-top: 15%;
+    }
+
+    @include desktop {
+        padding: 3% 0;
     }
 
     .about-horttas__banner {
@@ -211,6 +356,10 @@
                 right: 0;
                 bottom: 0;
                 z-index: 2;
+
+                @include mobile {
+                    right: 2%;
+                }
 
                 @include desktop-full {
                     right: 8%;
@@ -284,7 +433,15 @@
     position: relative;
 
     @include mobile {
-        padding-top: 20%;
+        padding-top: 37%;
+    }
+
+    @include tablet {
+        padding-top: 15%;
+    }
+
+    @include desktop {
+        padding: 3% 0;
     }
 
     .foods__banner {
@@ -365,7 +522,15 @@
     min-height: 100vh;
 
     @include mobile {
-        padding-top: 20%;
+        padding-top: 37%;
+    }
+
+    @include tablet {
+        padding-top: 15%;
+    }
+
+    @include desktop {
+        padding: 3% 0;
     }
 
     .join__banner {
@@ -404,8 +569,8 @@
                 bottom: -13%;
                 z-index: 2;
 
-                @include mobile{
-                    right: 7%; 
+                @include mobile {
+                    right: 7%;
                 }
 
                 @include desktop-full {
@@ -491,7 +656,15 @@
     background-color: $verde;
 
     @include mobile {
-        padding-top: 20%;
+        padding-top: 37%;
+    }
+
+    @include tablet {
+        padding-top: 15%;
+    }
+
+    @include desktop {
+        padding: 0;
     }
 
     .row {
@@ -530,22 +703,22 @@
             @include desktop-full {
                 padding-bottom: 20%;
                 margin: 0 0 0 110px;
-            }   
+            }
 
-            img{
+            img {
                 display: block;
 
-                @include mobile{
+                @include mobile {
                     display: none;
                 }
             }
 
-            h2{
+            h2 {
                 color: $branco;
                 display: none;
                 padding-bottom: 15%;
 
-                @include mobile{
+                @include mobile {
                     display: block;
                 }
             }
@@ -554,7 +727,7 @@
                 padding: 2.5% 0;
                 color: $amarelo;
 
-                @include mobile{
+                @include mobile {
                     font-size: 18px;
                 }
             }
@@ -606,9 +779,81 @@
                         border: 2px solid $amarelo;
                     }
 
-                    @include mobile{
+                    @include mobile {
                         width: 100%;
                     }
+                }
+
+                .info_form-content__load {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 2;
+
+                    .load__spinner {
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        right: 50%;
+
+                        @include mobile{
+                            left: 47%; 
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-mobile {
+        margin-top: 20%;
+        display: none;
+
+        @include mobile {
+            display: block;
+        }
+
+        .footer-mobile__info {
+            @include flex-box;
+            align-items: flex-end;
+            color: $branco;
+            font-size: 14px;
+            font-weight: lighter;
+
+            div {
+                margin: 0 10px;
+            }
+        }
+
+        hr {
+            color: $branco;
+            background-color: $branco;
+            height: 1px;
+        }
+
+        .footer-mobile__copyright {
+            @include flex-box;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            color: $branco;
+            font-weight: lighter;
+            font-size: 14px;
+
+            div {
+                text-align: center;
+                padding-bottom: 5%;
+            }
+
+            .copyright__bresults {
+                @include flex-box;
+                align-items: center;
+                span {
+                    margin: 0 7px;
                 }
             }
         }
@@ -625,7 +870,7 @@
         min-height: 95vh;
         padding: 100px 15px 15px 15px;
 
-        @include mobile{
+        @include mobile {
             display: none;
         }
 
