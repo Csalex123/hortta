@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@300;400;700&display=swap');
+
+:root {
+    font-family: 'Chivo', sans-serif;
+}
+
+body {
+    background-color: #225627;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+}
+
+.container h2{
+    padding-top: 20px;
+    color: #E7AD08;
+}
+
+.container p{
+    color: #fff;
+}
+
+.container button{
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 25%;
+    cursor: pointer;
+    padding: 8% 35%;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    transition: background-color .5s ease-in-out, color .5s ease-in-out;
+}
+
+.container button:hover{
+    background-color: #FFF;
+    color: #225627;
+}
+
+.container button i {
+    margin-right: 20%;
+}

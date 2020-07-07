@@ -59,7 +59,8 @@ $(document).ready(() => {
             if (data == "success") {
                 $(".info_form-content__load").hide();
                 $("#form-contact").css({ 'opacity': "1" });
-                alert("E-mail Enviado");
+                window.location.href = "success.html"
+                
             } else if (data == "error") {
                 $(".info_form-content__load").hide();
                 $("#form-contact").css({ 'opacity': "1" });

@@ -129,7 +129,7 @@
 .horttas {
     min-height: 100vh;
     .horttas__info {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.2);
         position: absolute;
         top: 0;
         z-index: 2;
@@ -169,8 +169,9 @@
 
             padding-top: 2%;
 
+
             @media (min-width: 1400px) {
-                padding-top: 25%;
+                padding-top: 24%;
             }
 
             p {
