@@ -5,8 +5,8 @@
     position: fixed;
     z-index: 199;
     width: 100vw;
-    height: 30vh;
-    background-color: transparent;
+    padding: 10% 15px;
+
 
     @include mobile {
         display: block;
@@ -20,25 +20,7 @@
         display: none;
     }
 
-    .header__card-top {
-        outline: none;
-        @include flex-box;
-        justify-content: center;
-
-        .card-top__content {
-            outline: line;
-            margin-top: -20px;
-            border: none;
-            background-color: $branco;
-            @include border-radius(20px);
-            height: 50px;
-            width: 70%;
-            color: $branco;
-        }
-    }
-
     .header__logo-icon {
-        padding-top: 8%;
         @include flex-box;
         align-items: center;
         justify-content: space-between;
@@ -55,25 +37,8 @@
 
     transition: height 0.6s ease-in-out;
 
-    .menu__card-top {
-        outline: none;
-        @include flex-box;
-        justify-content: center;
-
-        .card-top__content {
-            outline: line;
-            margin-top: -20px;
-            border: none;
-            background-color: $branco;
-            @include border-radius(20px);
-            height: 50px;
-            width: 70%;
-            color: $branco;
-        }
-    }
-
     .menu__header {
-        padding-top: 8%;
+        padding-top: 4.5%;
 
         @include flex-box;
         align-items: center;
@@ -129,7 +94,7 @@
 .horttas {
     min-height: 100vh;
     .horttas__info {
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: rgba(0, 0, 0, 0.3);
         position: absolute;
         top: 0;
         z-index: 2;
@@ -148,17 +113,6 @@
         .horttas__info--logo {
             @include flex-box;
             padding: 7% 0 0 22%;
-
-            span {
-                color: $branco;
-                padding-left: 12px;
-                align-self: flex-end;
-                max-width: 20px;
-                line-height: 12px;
-                letter-spacing: 2px;
-                font-weight: 300;
-                font-size: 11px;
-            }
         }
 
         .horttas__info--scroll {
@@ -311,7 +265,7 @@
     background-color: $verde;
 
     @include mobile {
-        padding-top: 37%;
+        padding-top: 25%;
     }
 
     @include tablet {
@@ -434,7 +388,7 @@
     position: relative;
 
     @include mobile {
-        padding-top: 37%;
+        padding-top: 25%;
     }
 
     @include tablet {
@@ -523,7 +477,7 @@
     min-height: 100vh;
 
     @include mobile {
-        padding-top: 37%;
+        padding-top: 25%;
     }
 
     @include tablet {
@@ -657,7 +611,7 @@
     background-color: $verde;
 
     @include mobile {
-        padding-top: 37%;
+        padding-top: 20%;
     }
 
     @include tablet {

@@ -71,4 +71,19 @@ $(document).ready(() => {
     });
 });
 
+$(document).ready(() => {
+    var el = document.getElementById("menu"); // elemento alvo
+    var numPx = "80"; 
+    var menu = document.getElementById("menu");
+
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > numPx) {
+            $("#menu").css({'background': '#225627', "transition": "background .8s", "transition": "padding .8s", "padding": "4% 15px"});
+        } else {
+            $("#menu").css({'background': 'transparent', "transition": "background .8s", "transition": "padding .8s", "padding": "10% 15px"});
+        }
+    });
+
+});
+
 
